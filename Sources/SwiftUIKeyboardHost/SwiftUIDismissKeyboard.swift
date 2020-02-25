@@ -3,13 +3,13 @@ import SwiftUI
 @available(iOS 13.0, tvOS 13.0, *)
 @available(OSX, unavailable)
 @available(watchOS, unavailable)
-public struct SwifUIDismissKeyboard: UIViewRepresentable {
+public struct SwiftUIDismissKeyboard: UIViewRepresentable {
     
     public init() {
         
     }
     
-    public func makeUIView(context: UIViewRepresentableContext<SwifUIDismissKeyboard>) -> UIView {
+    public func makeUIView(context: UIViewRepresentableContext<SwiftUIDismissKeyboard>) -> UIView {
         let v = UIView(frame: .zero)
         let gesture = UITapGestureRecognizer(target: context.coordinator,
                                              action: #selector(Coordinator.tapped))
@@ -29,12 +29,12 @@ public struct SwifUIDismissKeyboard: UIViewRepresentable {
         }
     }
     
-    public func makeCoordinator() -> SwifUIDismissKeyboard.Coordinator {
+    public func makeCoordinator() -> SwiftUIDismissKeyboard.Coordinator {
         return Coordinator()
     }
     
     public func updateUIView(_ uiView: UIView,
-                      context: UIViewRepresentableContext<SwifUIDismissKeyboard>) {
+                      context: UIViewRepresentableContext<SwiftUIDismissKeyboard>) {
     }
     
 }
